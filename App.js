@@ -7,6 +7,8 @@ import ProfileImage from "./components/ProfileImage";
 import ToggleSwitch from "./components/ToggleSwitch";
 import Calendar from "./components/Calendar";
 import CategoryItem from "./components/CategoryItem";
+import TopRated from "./components/TopRated";
+
 
 const imgSrc = require("./assets/hiroshi.jpg");
 
@@ -14,7 +16,7 @@ const App = ()=> {
   return (
     <NativeBaseProvider>
       {/* Wrapper */}
-      <Box
+      <ScrollView
         py={10}
         bg="#EAEEF2"
         position="absolute"
@@ -55,8 +57,47 @@ const App = ()=> {
           </ScrollView>
         </Flex>
         {/* Top Rated Section */}
-        <Text mb={10} ml={5} fontSize={19}>Top Rated</Text>
-      </Box>
+        <Text mb={5} ml={5} fontSize={19}>
+          Top Rated
+        </Text>
+        <Flex direction="row" mb={10}>
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+            <TopRated
+              imgSrc={imgSrc}
+              firstName="Gordon"
+              LastName="Ramsayiski"
+              cuisine="Italian"
+              location="California"
+              minPeople="8"
+              maxPeople="15"
+              costPerPerson="5000"
+            />
+            <TopRated
+              imgSrc={imgSrc}
+              firstName="Jacob"
+              LastName="Namhyung"
+              cuisine="Korean"
+              location="Vancouver"
+              minPeople="2"
+              maxPeople="98"
+              costPerPerson="1200"
+            />
+            <TopRated
+              imgSrc={imgSrc}
+              firstName="Simer"
+              LastName="Singh"
+              cuisine="Indian"
+              location="Vancouver"
+              minPeople="10"
+              maxPeople="230"
+              costPerPerson="90"
+            />
+          </ScrollView>
+        </Flex>
+        <Text mb={5} ml={5} fontSize={19}>
+          Nearby
+        </Text>
+      </ScrollView>
     </NativeBaseProvider>
   );
 }
