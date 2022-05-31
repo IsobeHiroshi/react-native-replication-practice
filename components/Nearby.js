@@ -60,7 +60,7 @@ const Nearby = (props) => {
         </Center>
       </Flex>
       <Flex justify="space-between">
-        <Text fontFamily="GilroyBold">
+        <Text fontFamily="GilroyBold" color="#4E7CAC">
           {props.firstName} {props.LastName}
         </Text>
         <Flex direction="row" mb={2}>

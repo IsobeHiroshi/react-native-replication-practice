@@ -14,7 +14,7 @@ const CurrentPosition = () => {
 
   return (
     <Flex direction="row" justify="start" align="center" ml={5}>
-      <Icon as={Feather} color="pink.300" name="map-pin" mr={2}></Icon>
+      <Icon as={Feather} color="#FF8D78" name="map-pin" mr={2}></Icon>
       <Text fontFamily="Gilroy">Mumbai, Maharashtr</Text>
     </Flex>
   );

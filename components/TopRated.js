@@ -40,7 +40,9 @@ const TopRated = (props) => {
           mt={2}
           roundedBottom={20}
         >
-          <Text fontFamily="GilroyBold">Book Now</Text>
+          <Text fontFamily="GilroyBold" color="#4E7CAC">
+            Book Now
+          </Text>
         </Center>
       </Box>
       <Flex
@@ -59,10 +61,10 @@ const TopRated = (props) => {
       </Flex>
       <Flex justify="space-between">
         <Box>
-          <Text fontWeight="bold" fontFamily="GilroyBold">
+          <Text fontWeight="bold" fontFamily="GilroyBold" color="#4E7CAC">
             {props.firstName}
           </Text>
-          <Text fontWeight="bold" fontFamily="GilroyBold">
+          <Text fontWeight="bold" fontFamily="GilroyBold" color="#4E7CAC">
             {props.LastName}
           </Text>
         </Box>
@@ -70,7 +72,7 @@ const TopRated = (props) => {
           <Icon
             as={MaterialCommunityIcons}
             name="fire-circle"
-            color="pink.300"
+            color="#FF8D78"
             mr={2}
             size={4}
           ></Icon>

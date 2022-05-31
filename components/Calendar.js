@@ -13,7 +13,7 @@ const Calendar = () => {
   }
   return (
     <Flex direction="row" align="center" width="35%" justify="flex-end" mt={2}>
-      <Text fontSize={11} fontFamily="GilroyBold">
+      <Text fontSize={11} fontFamily="GilroyBold" color="#4E7CAC">
         12 April 2022
       </Text>
       <Flex
