@@ -1,8 +1,12 @@
-import {Text, Image, Flex, Center, Box, Icon} from 'native-base'
-import { MaterialCommunityIcons, Feather, SimpleLineIcons } from "@expo/vector-icons";
+import { Text, Image, Flex, Center, Box, Icon } from "native-base";
+import {
+  MaterialCommunityIcons,
+  Feather,
+  SimpleLineIcons,
+} from "@expo/vector-icons";
 import { useFonts } from "expo-font";
 
-const TopRated = (props) => {
+const Nearby = (props) => {
   const [loaded] = useFonts({
     Gilroy: require("../assets/Gilroy-Light.otf"),
     GilroyBold: require("../assets/Gilroy-ExtraBold.otf"),
@@ -12,20 +16,18 @@ const TopRated = (props) => {
     return null;
   }
   return (
-    /* If the width of the parent element is configured with %, the layout will be collapse */
     <Flex
-      width="300"
-      height="200"
+      width="90%"
+      height="250"
       p={4}
       rounded={20}
       borderWidth={1}
       borderColor="#A6BDD5"
       direction="row"
-      mr={5}
-      left={5}
       position="relative"
+      mb={20}
     >
-      <Box width="45%" mr={3}>
+      <Box width="40%" mr={5}>
         <Image
           alt="chef picture"
           source={props.imgSrc}
@@ -58,14 +60,25 @@ const TopRated = (props) => {
         </Center>
       </Flex>
       <Flex justify="space-between">
-        <Box>
-          <Text fontWeight="bold" fontFamily="GilroyBold">
-            {props.firstName}
+        <Text fontFamily="GilroyBold">
+          {props.firstName} {props.LastName}
+        </Text>
+        <Flex direction="row" mb={2}>
+          <Text mr={1} fontSize={13}>
+            {"\u2022"}
           </Text>
-          <Text fontWeight="bold" fontFamily="GilroyBold">
-            {props.LastName}
+          <Text numberOfLines={2} width="65%" fontSize={13} fontFamily="Gilroy">
+            Indian chef, designer, rich man,
           </Text>
-        </Box>
+        </Flex>
+        <Flex direction="row" mb={2}>
+          <Text mr={1} fontSize={13}>
+            {"\u2022"}
+          </Text>
+          <Text numberOfLines={2} width="65%" fontSize={13} fontFamily="Gilroy">
+            He is the coolest designer in Vancouver.
+          </Text>
+        </Flex>
         <Flex direction="row" align="center" mb={1}>
           <Icon
             as={MaterialCommunityIcons}
@@ -117,6 +130,6 @@ const TopRated = (props) => {
       </Flex>
     </Flex>
   );
-}
+};
 
-export default TopRated;
+export default Nearby;
